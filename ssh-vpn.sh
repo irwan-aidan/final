@@ -82,11 +82,9 @@ apt-get --reinstall --fix-missing install -y bzip2 gzip coreutils wget screen rs
 #echo "clear" >> .profile
 #echo "neofetch" >> .profile
 # Admin Welcome
-wget -O /usr/bin/welcomeadmin "https://https://raw.githubusercontent.com/Dork96/Final/main/welcomeadmin.sh"
+wget -O /usr/bin/welcomeadmin "https://raw.githubusercontent.com/Dork96/Final/main/welcomeadmin.sh"
 chmod +x /usr/bin/welcomeadmin
 echo "welcomeadmin" >> .profile
-rm -f /root/welcomeadmin
-
 
 # install webserver
 apt -y install nginx
