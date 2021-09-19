@@ -1,5 +1,4 @@
 #!/bin/bash
-wget https://raw.githubusercontent.com/Dork96/Final/main/cf.sh && chmod +x cf.sh && ./cf.sh
 domain=$(cat /root/domain)
 apt install iptables iptables-persistent -y
 apt install curl socat xz-utils wget apt-transport-https gnupg gnupg2 gnupg1 dnsutils lsb-release -y 
@@ -520,6 +519,5 @@ chmod +x renew-tr
 chmod +x certv2ray
 cd
 rm -f ins-vt.sh
-mv /root/domain /etc/v2ray
 echo -e "Instaled V2RAY Succes..."
 
