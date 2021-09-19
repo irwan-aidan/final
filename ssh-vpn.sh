@@ -305,7 +305,7 @@ wget -O menu-system "https://raw.githubusercontent.com/Dork96/Final/main/menu-sy
 wget -O menu-tr "https://raw.githubusercontent.com/Dork96/Final/main/menu-tr.sh"
 wget -O menu-v2ray "https://raw.githubusercontent.com/Dork96/Final/main/menu-v2ray.sh"
 wget -O menu-wr "https://raw.githubusercontent.com/Dork96/Final/main/menu-wr.sh"
-wget -O izin "https://raw.githubusercontent.com/Dork96/Final/main/izin.sh"
+
 
 chmod +x add-host
 chmod +x menu
@@ -347,7 +347,6 @@ chmod +x menu-system
 chmod +x menu-tr
 chmod +x menu-v2ray
 chmod +x menu-wr
-chmod +x izin
 
 echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
