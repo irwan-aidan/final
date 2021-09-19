@@ -388,7 +388,7 @@ cd
 rm -f /root/key.pem
 rm -f /root/cert.pem
 rm -f /root/ssh-vpn.sh
-
+clear
 echo -e "Instaled SSH OVPN Succes..."
 # finihsing
 clear
