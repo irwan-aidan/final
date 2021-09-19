@@ -92,6 +92,7 @@ END
 systemctl daemon-reload
 systemctl enable ohp
 systemctl restart ohp
+clear
 echo ""
 echo -e "${GREEN}Done Installing OHP Server${NC}"
 echo -e "Port OVPN OHP TCP: $ohpp"
