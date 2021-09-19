@@ -282,7 +282,7 @@ wget -O renew-ssh "https://raw.githubusercontent.com/Dork96/Final/main/renew-ssh
 wget -O autokill "https://raw.githubusercontent.com/Dork96/Final/main/autokill.sh"
 wget -O mulog "https://raw.githubusercontent.com/Dork96/Final/main/mulog.sh"
 wget -O tendang "https://raw.githubusercontent.com/Dork96/Final/main/tendang.sh"
-wget -O change-port "https://raw.githubusercontent.com/Dork96/Final/main/change.sh"
+wget -O change-port "https://raw.githubusercontent.com/Dork96/Final/main/change-port.sh"
 wget -O port-ovpn "https://raw.githubusercontent.com/Dork96/Final/main/port-ovpn.sh"
 wget -O port-ssl "https://raw.githubusercontent.com/Dork96/Final/main/port-ssl.sh"
 wget -O port-wg "https://raw.githubusercontent.com/Dork96/Final/main/port-wg.sh"
@@ -294,7 +294,7 @@ wget -O port-vless "https://raw.githubusercontent.com/Dork96/Final/main/port-vle
 wget -O webmin "https://raw.githubusercontent.com/Dork96/Final/main/webmin.sh"
 wget -O xp "https://raw.githubusercontent.com/Dork96/Final/main/xp.sh"
 wget -O kernel-up "https://raw.githubusercontent.com/Dork96/Final/main/kernel.sh"
-wget -O update "https://raw.githubusercontent.com/Dork96/Final/main/update-1.2.sh"
+#wget -O update "https://raw.githubusercontent.com/Dork96/Final/main/update-1.2.sh"
 wget -O auto-reboot "https://raw.githubusercontent.com/Dork96/Final/main/reboot.sh"
 
 wget -O menu-l2tp "https://raw.githubusercontent.com/Dork96/Final/main/menu-l2tp.sh"
@@ -336,7 +336,7 @@ chmod +x port-vless
 chmod +x webmin
 chmod +x xp
 chmod +x kernel-up
-chmod +x update
+#chmod +x update
 chmod +x auto-reboot
 
 chmod +x menu-l2tp
