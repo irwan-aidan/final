@@ -15,9 +15,11 @@ sudo gem install lolcat
 
 mkdir /var/lib/premium-script;
 echo "IP=" >> /var/lib/premium-script/ipvps.conf
-#wget https://raw.githubusercontent.com/Dork96/Final/main/cf.sh && chmod +x cf.sh && ./cf.sh
+
 #install ssh ovpn
 wget https://raw.githubusercontent.com/Dork96/Final/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
+#install ohp-server
+wget https://raw.githubusercontent.com/Dork96/Final/main/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 #sstp
 wget https://raw.githubusercontent.com/Dork96/Final/main/sstp.sh && chmod +x sstp.sh && ./sstp.sh
 #install ssr
@@ -26,19 +28,22 @@ wget https://raw.githubusercontent.com/Dork96/Final/main/ssr.sh && chmod +x ssr.
 wget https://raw.githubusercontent.com/Dork96/Final/main/sodosok.sh && chmod +x sodosok.sh && ./sodosok.sh
 #installwg
 wget https://raw.githubusercontent.com/Dork96/Final/main/wg.sh && chmod +x wg.sh && ./wg.sh
-#install v2ray
-wget https://raw.githubusercontent.com/Dork96/Final/main/ins-vt.sh && chmod +x ins-vt.sh && ./ins-vt.sh
 #install L2TP
 wget https://raw.githubusercontent.com/Dork96/Final/main/ipsec.sh && chmod +x ipsec.sh && ./ipsec.sh
+#install v2ray
+wget https://raw.githubusercontent.com/Dork96/Final/main/cf.sh && chmod +x cf.sh && ./cf.sh
+wget https://raw.githubusercontent.com/Dork96/Final/main/ins-vt.sh && chmod +x ins-vt.sh && ./ins-vt.sh
 #br-set
 wget https://raw.githubusercontent.com/Dork96/Final/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+
 # Set Index
 cd /home/vps/public_html
 wget https://raw.githubusercontent.com/Dork96/Final/main/index.html
-#install ohp-server
-wget https://raw.githubusercontent.com/Dork96/Final/main/ohp.sh && chmod +x ohp.sh && ./ohp.sh
+# Encrypt
 cd
+wget https://raw.githubusercontent.com/Dork96/Final/main/encrypt.sh && chmod +x encrypt.sh && ./encrypt.sh
 
+rm -f /root/encrypt.sh
 rm -f /root/ssh-vpn.sh
 rm -f /root/sstp.sh
 rm -f /root/wg.sh
@@ -124,10 +129,7 @@ echo "==========================================================================
 echo "-------------------------- Created By THIRASTORE ---------------------------" | tee -a log-install.txt
 echo "================================================================================" | tee -a log-install.txt
 echo ""
-cd
-wget https://raw.githubusercontent.com/Dork96/Final/main/encrypt.sh && chmod +x encrypt.sh && ./encrypt.sh
 echo "	 Your VPS Will Be Automatical Reboot In 10 s"
 rm -f install.sh
-rm -f encrypt.sh
 sleep 10
 reboot
