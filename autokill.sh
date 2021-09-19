@@ -3,8 +3,22 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- https://icanhazip.com);
-echo "Checking VPS"
-izin
+IZIN=$(curl https://raw.githubusercontent.com/Dork96/rentScript/main/ipvps | grep $MYIP)
+if [ $MYIP = $IZIN ]; then
+clear
+echo -e ""
+echo -e "${green}Permission Accepted...${NC}"
+else
+clear
+echo -e ""
+echo -e "======================================="
+echo -e "${red}=====[ Permission Denied...!!! ]=====${NC}";
+echo -e "Contact WA https//wa.me/+6285717614888"
+echo -e "For Registration IP VPS"
+echo -e "======================================="
+echo -e ""
+exit 0
+fi
 Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[41;37m" && Font_color_suffix="\033[0m"
 Info="${Green_font_prefix}[ON]${Font_color_suffix}"
 Error="${Red_font_prefix}[OFF]${Font_color_suffix}"
