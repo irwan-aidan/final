@@ -2,8 +2,8 @@
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
-rm /etc/v2ray/domain
-rm -d /etc/v2ray
+rm -rf /etc/v2ray/domain
+rm -rf /etc/v2ray
 MYIP=$(wget -qO- https://icanhazip.com);
 echo "Checking VPS"
 apt install jq curl -y
