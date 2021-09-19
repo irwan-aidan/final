@@ -2,10 +2,9 @@
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
-rm -rf /etc/v2ray/domain
-rm -rf /etc/v2ray
+#rm -rf /etc/v2ray/domain
+#rm -rf /etc/v2ray
 MYIP=$(wget -qO- https://icanhazip.com);
-echo "Checking VPS"
 apt install jq curl -y
 DOMAIN=wuzzzssh.xyz
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
