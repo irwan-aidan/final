@@ -3,8 +3,22 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- https://icanhazip.com);
-echo "Checking VPS"
-izin
+IZIN=$(curl https://raw.githubusercontent.com/Dork96/rentScript/main/ipvps | grep $MYIP)
+if [ $MYIP = $IZIN ]; then
+clear
+echo -e ""
+echo -e "${green}Permission Accepted...${NC}"
+else
+clear
+echo -e ""
+echo -e "======================================="
+echo -e "${red}=====[ Permission Denied...!!! ]=====${NC}";
+echo -e "Contact WA https//wa.me/+6285717614888"
+echo -e "For Registration IP VPS"
+echo -e "======================================="
+echo -e ""
+exit 0
+fi
 clear
 # Load params
 source /etc/wireguard/params
@@ -95,6 +109,6 @@ AllowedIPs = $CLIENT_ADDRESS/32" >>"/etc/wireguard/$SERVER_WG_NIC.conf"
 	echo -e "Wireguard   : http://$MYIP:81/$CLIENT_NAME.conf"
 	echo -e "================================="
 	echo -e "Expired On  : $exp"
-	echo -e "Created By THIRASTORE"
+	echo -e "Script Created By THIRASTORE"
 	echo -e ""
 	rm -f /root/wg0-client-$CLIENT_NAME.conf
