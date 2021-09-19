@@ -86,7 +86,6 @@ shc -f strt
 shc -f swapkvm
 shc -f tendang
 shc -f trial-ssh
-shc -f welcomeadmin
 shc -f xp
 
 
@@ -164,7 +163,6 @@ mv strt.x strt
 mv swapkvm.x swapkvm
 mv tendang.x tendang
 mv trial-ssh.x trial-ssh
-mv welcomeadmin.x welcomeadmin
 mv xp.x xp
 
 #Remove Extension
