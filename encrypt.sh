@@ -172,4 +172,7 @@ rm -f *.x.c
 clear
 echo -e "Encrypt Shell Susuccessful..."
 rm -f encrypt
-
+cd
+rm -rf shc-4.0.2
+rm -rf 4.0.2.tar.gz
+rm -rf master.zip
