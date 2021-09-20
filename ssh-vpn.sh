@@ -72,7 +72,7 @@ apt-get remove --purge exim4 -y
 apt -y install wget curl
 
 # set time GMT +8
-ln -fs /usr/share/zoneinfo/Asia/Malaysia /etc/localtime
+ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 
 # set locale
 sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
@@ -91,7 +91,7 @@ apt -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/Dork96/Final/main/nginx.conf"
+wget -O/etc/nginx/nginx.conf "https://raw.githubusercontent.com/Dork96/Final/main/nginx.conf"
 mkdir -p /home/vps/public_html
 wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/Dork96/Final/main/vps.conf"
 /etc/init.d/nginx restart
