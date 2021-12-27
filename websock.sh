@@ -4,7 +4,7 @@ cd
 
 figlet -f slant Install WS | lolcat
 # Install Template
-wget -q -O /usr/local/bin/ws-drop "https://raw.githubusercontent.com/Dork96/Final/main/ws-dropbear.py"
+wget -q -O /usr/local/bin/ws-dropbear "https://raw.githubusercontent.com/Dork96/Final/main/ws-dropbear.py"
 wget -q -O /usr/local/bin/ws-openssh "https://raw.githubusercontent.com/Dork96/Final/main/ws-openssh.py"
 wget -q -O /usr/local/bin/ws-ovpn "https://raw.githubusercontent.com/Dork96/Final/main/ws-ovpn.py"
 wget -q -O /usr/local/bin/ws-tls "https://raw.githubusercontent.com/Dork96/Final/main/ws-tls.py"
