@@ -7,12 +7,12 @@ figlet -f slant Install WS | lolcat
 wget -q -O /usr/local/bin/ws-dropbear "https://raw.githubusercontent.com/Dork96/Final/main/ws-dropbear.py"
 wget -q -O /usr/local/bin/ws-openssh "https://raw.githubusercontent.com/Dork96/Final/main/ws-openssh.py"
 wget -q -O /usr/local/bin/ws-ovpn "https://raw.githubusercontent.com/Dork96/Final/main/ws-ovpn.py"
-wget -q -O /usr/local/bin/ws-tls "https://raw.githubusercontent.com/Dork96/Final/main/ws-tls.py"
+wget -q -O /usr/local/bin/ws-stunnel "https://raw.githubusercontent.com/Dork96/Final/main/ws-tls.py"
 
 chmod +x /usr/local/bin/ws-dropbear
 chmod +x /usr/local/bin/ws-openssh
 chmod +x /usr/local/bin/ws-ovpn
-chmod +x /usr/local/bin/ws-tls
+chmod +x /usr/local/bin/ws-stunnel
 
 echo -e "Configurating CDN" | lolcat
 
@@ -82,7 +82,7 @@ User=root
 CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
-ExecStart=/usr/bin/python -O /usr/local/bin/ws-tls
+ExecStart=/usr/bin/python -O /usr/local/bin/ws-stunnel
 Restart=on-failure
 [Install]
 WantedBy=multi-user.target
