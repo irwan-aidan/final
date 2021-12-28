@@ -71,7 +71,7 @@ ovpn="$(netstat -nlpt | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | c
 ovpn2="$(netstat -nlpu | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
 sleep 1
 clear
-dibuat=$(date +"%b %C, %Y")
+dibuat=$(date +"%b %d, %Y")
 useradd -e `date -d "$masaaktif days" +"%Y-%m-%d"` -s /bin/false -M $Login
 exp="$(chage -l $Login | grep "Account expires" | awk -F": " '{print $2}')"
 echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
@@ -104,7 +104,7 @@ echo -e "================================"
 echo -e "HttpCustom"
 echo -e "bug.com:8880@$Login:$Pass"
 echo -e "================================"
-echo -e "Aktif Selama   : $masaaktif Days"
+echo -e "Aktive Until   : $masaaktif Days"
 echo -e "Created On     : $dibuat"
 echo -e "Expired On     : $exp"
 echo -e "===================================="
