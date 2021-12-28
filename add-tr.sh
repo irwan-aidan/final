@@ -40,6 +40,7 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${user_EXISTS} == '0' ]]; do
 	done
 read -p "Expired (days): " masaaktif
 sed -i '/"'""$uuid""'"$/a\,"'""$user""'"' /etc/trojan/config.json
+dibuat=$(date +"%Y-%m-%d")
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 echo -e "### $user $exp" >> /etc/trojan/akun.conf
 systemctl restart trojan
@@ -47,7 +48,7 @@ trojanlink="trojan://${user}@${domain}:${tr}"
 clear
 echo -e ""
 echo -e "=========================="
-echo -e "Trojan Information Account"
+echo -e "Trojan Information Account"  | lolcat
 echo -e "=========================="
 echo -e "Remarks        : ${user}"
 echo -e "Host/IP        : ${domain}"
@@ -55,6 +56,8 @@ echo -e "port           : ${tr}"
 echo -e "Key            : ${user}"
 echo -e "link           : ${trojanlink}"
 echo -e "=========================="
+echo -e "Active Until   : $masaaktif Days"
+echo -e "Created On     : $dibuat"
 echo -e "Expired On     : $exp"
-echo -e "Script Created By THIRASTORE"
+echo -e "Script Created By THIRASTORE" | lolcat
 echo -e ""
