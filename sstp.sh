@@ -23,12 +23,12 @@ touch /home/sstp/sstp_account
 touch /var/lib/premium-script/data-user-sstp
 #detail nama perusahaan
 country=MY
-state=Malaysia
-locality=Malaysia
-organization=www.abidz.ga
-organizationalunit=www.abidz.ga
-commonname=okkaykayyo
-email=admin@abidz.ga
+state=Selangor
+locality=Gombak
+organization=www.aidan.my
+organizationalunit=aidan-vpn
+commonname=aidanvpn
+email=server@aidan.my
 
 #install sstp
 apt-get install -y build-essential cmake gcc linux-headers-`uname -r` git libpcre3-dev libssl-dev liblua5.1-0-dev ppp
